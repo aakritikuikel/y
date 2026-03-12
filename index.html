@@ -504,35 +504,155 @@ window.addEventListener("scroll",reveal);
 
 
     <!-- ======= Research Section ======= -->
-    <section id="research">
-      <div class="title-box text-center">
-        <h1>Research</h1>
-      </div>
+<section id="research">
 
-      <div class="box-shadow-full">
-        <h2>Graduate Research Assistant / Teaching Assistant</h2>
-        <h5>Kinesiology, Health, Food &amp; Nutritional Sciences Dept., UW–Stout • Sep 2025 – Current</h5>
+<style>
 
-        <h5>&bull; Performed microbial analysis: SPC, yeast &amp; mold, LAB, coliforms, <i>E. coli</i>, Salmonella, Listeria, Vibrio (meat, seafood, produce, dairy, water)</h5>
-        <h5>&bull; Conducted pathogen isolation, biochemical assays, FDA/BAM &amp; USDA/FSIS methods; MPN vs. Petrifilm analysis</h5>
-        <h5>&bull; Applied molecular techniques: conventional PCR and real-time PCR for pathogen detection</h5>
-        <h5>&bull; Evaluated intrinsic/extrinsic growth factors (pH, water activity, moisture, oxygen, fermentation conditions)</h5>
-        <h5>&bull; Performed spoilage assessment, shelf-life studies, and water quality testing; maintained GMP/sanitation/biosafety compliance</h5>
-        <h5>&bull; Supported instruction: maintained lab readiness, reviewed lab reports, graded assignments, trained students on aseptic techniques</h5>
-      </div>
+#research{
+  padding:80px 20px;
+  background:#f8fafc;
+  font-family: 'Inter', sans-serif;
+}
 
-      <div class="box-shadow-full" style="margin-top: 25px;">
-        <h2>Research Assistant</h2>
-        <h5>Kinesiology, Health, Food &amp; Nutritional Sciences Dept., UW–Stout • May – Aug 2025</h5>
+#research .title-box h1{
+  font-size:40px;
+  font-weight:700;
+  margin-bottom:50px;
+  letter-spacing:.5px;
+}
 
-        <h5>&bull; Conducted HPLC analysis to quantify ascorbic acid and bioactive compounds in food matrices</h5>
-        <h5>&bull; Evaluated antimicrobial activity of grape seed extract against foodborne microbes (natural preservative focus)</h5>
-        <h5>&bull; Monitored shelf-life and stability of pickle varieties for room-temperature storage (pH, TPC, yeast &amp; mold, LAB)</h5>
-        <h5>&bull; Applied food microbiology and quality control techniques supporting food safety, preservation, and product development</h5>
-      </div>
-    </section>
-    <!-- End Research Section -->
+.research-card{
+  background:white;
+  border-radius:12px;
+  padding:35px;
+  margin-bottom:35px;
+  position:relative;
+  transition:all .35s ease;
+  border-left:6px solid #2563eb;
+  box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
 
+.research-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 18px 45px rgba(0,0,0,0.12);
+}
+
+.research-header{
+  margin-bottom:18px;
+}
+
+.research-title{
+  font-size:24px;
+  font-weight:700;
+  margin-bottom:5px;
+}
+
+.research-place{
+  color:#555;
+  font-size:15px;
+}
+
+.research-date{
+  font-size:14px;
+  color:#2563eb;
+  font-weight:600;
+  margin-top:3px;
+}
+
+.research-list{
+  margin-top:18px;
+  padding-left:0;
+  list-style:none;
+}
+
+.research-list li{
+  margin-bottom:12px;
+  font-size:15px;
+  line-height:1.6;
+  color:#333;
+  position:relative;
+  padding-left:25px;
+}
+
+.research-list li::before{
+  content:"";
+  width:8px;
+  height:8px;
+  border-radius:50%;
+  background:#2563eb;
+  position:absolute;
+  left:0;
+  top:9px;
+}
+
+@media (max-width:768px){
+
+.research-card{
+  padding:25px;
+}
+
+.research-title{
+  font-size:20px;
+}
+
+}
+
+</style>
+
+
+<div class="title-box text-center">
+<h1>Research Experience</h1>
+</div>
+
+
+<div class="research-card">
+
+<div class="research-header">
+<div class="research-title">Graduate Research Assistant / Teaching Assistant</div>
+<div class="research-place">Kinesiology, Health, Food & Nutritional Sciences Dept., UW–Stout</div>
+<div class="research-date">Sep 2025 – Present</div>
+</div>
+
+<ul class="research-list">
+<li>Performed microbial analysis including SPC, yeast & mold, LAB, coliforms, <i>E. coli</i>, Salmonella, Listeria, and Vibrio across meat, seafood, produce, dairy, and water samples.</li>
+
+<li>Conducted pathogen isolation and biochemical assays using FDA BAM and USDA FSIS methodologies including MPN and Petrifilm analysis.</li>
+
+<li>Applied molecular techniques including conventional PCR and real-time PCR for rapid pathogen detection.</li>
+
+<li>Evaluated intrinsic and extrinsic microbial growth factors such as pH, water activity, moisture content, oxygen availability, and fermentation conditions.</li>
+
+<li>Performed shelf-life studies, spoilage assessment, and water quality testing while maintaining GMP, sanitation, and biosafety compliance.</li>
+
+<li>Supported laboratory instruction by maintaining lab readiness, reviewing lab reports, grading assignments, and training students on aseptic microbiological techniques.</li>
+</ul>
+
+</div>
+
+
+
+<div class="research-card">
+
+<div class="research-header">
+<div class="research-title">Research Assistant</div>
+<div class="research-place">Kinesiology, Health, Food & Nutritional Sciences Dept., UW–Stout</div>
+<div class="research-date">May 2025 – Aug 2025</div>
+</div>
+
+<ul class="research-list">
+<li>Conducted HPLC analysis to quantify ascorbic acid and other bioactive compounds in food matrices.</li>
+
+<li>Evaluated antimicrobial activity of grape seed extract against foodborne microorganisms to explore natural preservative applications.</li>
+
+<li>Monitored shelf-life stability of pickle varieties during room temperature storage using pH, TPC, yeast & mold, and LAB measurements.</li>
+
+<li>Applied food microbiology and quality control techniques supporting food safety, preservation, and product development.</li>
+</ul>
+
+</div>
+
+</section>
+<!-- End Research Section -->
 
    <!-- ======= Work Section ======= -->
 <section id="work">

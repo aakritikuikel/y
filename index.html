@@ -161,7 +161,7 @@
                     
                       
                         <li><a target="_blank" href="https://www.linkedin.com/in/aakriti-kuikel-079597279/"><span class="ico-circle"><i class="bi bi-linkedin"></i></span></a></li>
-                       
+                      </ul>                       
                     </div>
 
 
@@ -177,195 +177,205 @@
                   <div class="about-me pt-4 pt-md-0">
                     
                     
-                    <!-- ======= Certifications Section ======= -->
-<section id="certifications" class="section-certifications">
+                   <!-- ======= Certifications Section ======= -->
+<section id="certifications" class="certifications">
   <div class="container">
-    <h2 class="cert-section-title">Certifications</h2>
 
-    <div class="cert-flow-wrapper">
-     
-      <div class="cert-flow-line"></div>
+    <div class="section-title text-center">
+      <h2>Certifications</h2>
+      <p class="cert-subtitle">Professional trainings and certifications</p>
+    </div>
 
-   
-      <div class="row cert-row">
-        <div class="col-md-6 cert-col">
-          <div class="cert-card">
-            <div class="cert-header">
-              <h3 class="cert-title">
-Internal Auditor ISO 22000:2018/HACcP</h3>
-            </div>
+    <div class="timeline">
 
-            <div class="cert-body">
-              
-              <div class="cert-image-wrapper">
-                <img
-   src="assets/img/globus_certification_nepal_pvt_ltd_logo.jpg"
-                  alt="Recieved Internal Auditor Training on Food Safety management System ISO 22000:2018/HACcP from Globus Certification Nepal Pvt. Ltd"
-                  class="img-fluid cert-image"
-                >
-                
-              </div>
+      <!-- Certification 1 -->
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
 
-              <p class="cert-description">
-                Recieved Internal Auditor Training on Food Safety management System ISO 22000:2018/HACcP from Globus Certification Nepal Pvt. Ltd
-              </p>
+        <div class="timeline-content">
+          <h4>Internal Auditor ISO 22000:2018 / HACCP</h4>
 
-           
-            </div>
-          </div>
-        </div>
+          <img src="assets/img/globus_certification_nepal_pvt_ltd_logo.jpg"
+               class="img-fluid cert-img"
+               alt="ISO Certification">
 
-        <div class="col-md-12 cert-connector-step">
-          <span class="cert-connector-dot"></span>
-        </div>
-
-        <div class="col-md-6 cert-col cert-col-right">
-          <div class="cert-card">
-            <div class="cert-header">
-              <h3 class="cert-title">Root cause analysis</h3>
-            </div>
-
-            <div class="cert-body">
-              
-              <div class="cert-image-wrapper">
-                <img
-                  src="assets/img/Blog-HOR-RootCause-2.png"
-                  alt="Engineer-in-Training Certificate Placeholder"
-                  class="img-fluid cert-image"
-                >
-             
-              </div>
-
-              <p class="cert-description">
-               Completed the Root Cause Analysis from xxxxxxxx
-              </p>
-
-             
-            </div>
-          </div>
+          <p>
+            Received Internal Auditor Training on Food Safety Management
+            System ISO 22000:2018/HACCP from Globus Certification Nepal Pvt. Ltd.
+          </p>
         </div>
       </div>
+
+      <!-- Certification 2 -->
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+
+        <div class="timeline-content">
+          <h4>Root Cause Analysis</h4>
+
+          <img src="assets/img/Blog-HOR-RootCause-2.png"
+               class="img-fluid cert-img"
+               alt="Root Cause Analysis">
+
+          <p>
+            Completed Root Cause Analysis training.
+          </p>
+        </div>
+      </div>
+
     </div>
+
   </div>
 </section>
-<!-- End Certifications Section -->
 
 
 <style>
-  .section-certifications {
-    padding: 60px 0;
-  }
 
-  .cert-section-title {
-    text-align: center;
-    font-weight: 700;
-    margin-bottom: 40px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-  }
+/* SECTION */
 
-  .cert-flow-wrapper {
-    position: relative;
-  }
+.certifications{
+  padding:70px 0;
+  background:#f8f9fa;
+}
 
-  /* Central line to give a flow-chart feel on larger screens */
-  .cert-flow-line {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 2px;
-    height: 100%;
-    transform: translateX(-50%);
-    background: #ddd;
-    z-index: 0;
-  }
+.section-title h2{
+  font-weight:700;
+  margin-bottom:10px;
+}
 
-  .cert-row {
-    position: relative;
-    z-index: 1;
-  }
+.cert-subtitle{
+  color:#666;
+  margin-bottom:40px;
+}
 
-  .cert-col {
-    margin-bottom: 40px;
-  }
+/* TIMELINE */
 
-  .cert-card {
-    background: #ffffff;
-    border-radius: 8px;
-    padding: 20px 20px 25px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-    position: relative;
-  }
+.timeline{
+  position:relative;
+  margin-top:40px;
+}
 
-  .cert-title {
-    font-size: 1.25rem;
-    font-weight: 600;
-    margin-bottom: 15px;
-  }
+.timeline::before{
+  content:"";
+  position:absolute;
+  left:50%;
+  width:3px;
+  height:100%;
+  background:#0078ff;
+  transform:translateX(-50%);
+}
 
-  .cert-body {
-    font-size: 0.95rem;
-  }
+/* TIMELINE ITEM */
 
-  .cert-image-wrapper {
-    text-align: center;
-    margin-bottom: 15px;
-  }
+.timeline-item{
+  position:relative;
+  margin-bottom:60px;
+}
 
-  .cert-image {
-    max-height: 180px;
-    object-fit: contain;
-    border-radius: 6px;
-    border: 1px dashed #ccc;
-    padding: 8px;
-  }
+.timeline-dot{
+  position:absolute;
+  left:50%;
+  width:18px;
+  height:18px;
+  background:#0078ff;
+  border-radius:50%;
+  transform:translateX(-50%);
+  top:15px;
+  box-shadow:0 0 0 6px #e6f0ff;
+}
 
-  .cert-placeholder-note {
-    font-size: 0.8rem;
-    color: #777;
-    margin-top: 6px;
-  }
+/* CARD */
 
-  .cert-description {
-    margin: 10px 0 18px;
-  }
+.timeline-content{
+  width:45%;
+  background:#fff;
+  padding:25px;
+  border-radius:10px;
+  box-shadow:0 5px 25px rgba(0,0,0,0.1);
+  transition:all .35s ease;
+}
 
-  .cert-btn {
-    text-transform: uppercase;
-    font-size: 0.85rem;
-    font-weight: 600;
-  }
+.timeline-content:hover{
+  transform:translateY(-6px);
+  box-shadow:0 12px 35px rgba(0,0,0,0.15);
+}
 
-  /* Connector dot between cards */
-  .cert-connector-step {
-    text-align: center;
-    margin: 10px 0 30px;
-  }
+.timeline-item:nth-child(odd) .timeline-content{
+  margin-left:0;
+}
 
-  .cert-connector-dot {
-    display: inline-block;
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    background: #007bff; /* matches Bootstrap primary; adjust if needed */
-    border: 3px solid #fff;
-    box-shadow: 0 0 0 3px #007bff33;
-  }
+.timeline-item:nth-child(even) .timeline-content{
+  margin-left:55%;
+}
 
-  /* For a staggered / flow feel on desktop */
-  @media (min-width: 768px) {
-    .cert-col-right {
-      margin-left: auto;
-    }
-  }
+/* IMAGE */
 
-  /* On small screens, hide the vertical line for clarity */
-  @media (max-width: 767.98px) {
-    .cert-flow-line {
-      display: none;
-    }
-  }
+.cert-img{
+  max-height:120px;
+  margin:15px 0;
+}
+
+/* SCROLL ANIMATION */
+
+.reveal{
+  opacity:0;
+  transform:translateY(40px);
+  transition:all 0.8s ease;
+}
+
+.reveal.active{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* MOBILE */
+
+@media (max-width:768px){
+
+.timeline::before{
+  left:12px;
+}
+
+.timeline-dot{
+  left:12px;
+}
+
+.timeline-content{
+  width:100%;
+  margin-left:35px !important;
+}
+
+}
+
 </style>
+
+
+<script>
+
+/* Scroll Reveal Animation */
+
+function reveal(){
+
+var reveals=document.querySelectorAll(".reveal");
+
+for(var i=0;i<reveals.length;i++){
+
+var windowHeight=window.innerHeight;
+var elementTop=reveals[i].getBoundingClientRect().top;
+var elementVisible=120;
+
+if(elementTop<windowHeight-elementVisible){
+reveals[i].classList.add("active");
+}
+
+}
+
+}
+
+window.addEventListener("scroll",reveal);
+
+</script>
+
 
 
                     

@@ -762,6 +762,168 @@ window.addEventListener("scroll",reveal);
 </section>
 <!-- End Work Section -->
 
+<!-- ======= Presentations Section ======= -->
+<section id="presentations">
+
+<style>
+
+#presentations{
+  padding:80px 20px;
+  background:#f8fafc;
+}
+
+#presentations .title-box h1{
+  font-size:40px;
+  font-weight:700;
+  margin-bottom:50px;
+}
+
+.presentation-card{
+  display:flex;
+  flex-wrap:wrap;
+  gap:40px;
+  align-items:center;
+  background:white;
+  border-radius:12px;
+  padding:35px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+.poster-img{
+  width:320px;
+  border-radius:10px;
+  cursor:pointer;
+  transition:transform .3s ease;
+  box-shadow:0 6px 18px rgba(0,0,0,0.15);
+}
+
+.poster-img:hover{
+  transform:scale(1.04);
+}
+
+.presentation-info{
+  flex:1;
+}
+
+.presentation-title{
+  font-size:24px;
+  font-weight:700;
+  margin-bottom:10px;
+}
+
+.presentation-meta{
+  color:#666;
+  margin-bottom:15px;
+}
+
+.presentation-list{
+  padding-left:18px;
+}
+
+.presentation-list li{
+  margin-bottom:10px;
+  line-height:1.6;
+}
+
+/* Poster modal */
+
+.poster-modal{
+  display:none;
+  position:fixed;
+  z-index:999;
+  padding-top:40px;
+  left:0;
+  top:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.85);
+}
+
+.poster-modal img{
+  margin:auto;
+  display:block;
+  max-width:85%;
+  max-height:85%;
+}
+
+.poster-close{
+  position:absolute;
+  top:25px;
+  right:40px;
+  color:white;
+  font-size:40px;
+  cursor:pointer;
+}
+
+</style>
+
+
+<div class="title-box text-center">
+<h1>Presentations</h1>
+</div>
+
+<div class="presentation-card">
+
+<img src="Assets/img/IMG_2457.JPEG" class="poster-img" onclick="openPoster()">
+
+<div class="presentation-info">
+
+<div class="presentation-title">
+A Dash of Science, A Pinch of Safety: Stirring HACCP into Carrot Soup
+</div>
+
+<div class="presentation-meta">
+Poster Presentation • University of Wisconsin–Stout
+</div>
+
+<ul class="presentation-list">
+
+<li>Developed a Hazard Analysis and Critical Control Point (HACCP) plan for canned carrot soup production to ensure product safety and quality.</li>
+
+<li>Analyzed biological, chemical, and physical hazards including microbial contamination from pathogens such as <i>Salmonella</i>, <i>E. coli</i>, and <i>Clostridium botulinum</i>.</li>
+
+<li>Designed a full processing flow diagram covering ingredient receiving, washing, blanching, cooking, filling, sealing, retort processing, and storage.</li>
+
+<li>Identified critical control points including ingredient temperature control, washing sanitation, blanching conditions, cooking temperature, retort sterilization, and metal detection.</li>
+
+<li>Established corrective actions and verification procedures to maintain food safety compliance and reduce contamination risks.</li>
+
+</ul>
+
+</div>
+</div>
+
+
+<!-- Poster Modal -->
+
+<div id="posterModal" class="poster-modal">
+
+<span class="poster-close" onclick="closePoster()">&times;</span>
+
+<img src="Assets/img/IMG_2457.JPEG">
+
+</div>
+
+
+<script>
+
+function openPoster(){
+document.getElementById("posterModal").style.display="block";
+}
+
+function closePoster(){
+document.getElementById("posterModal").style.display="none";
+}
+
+</script>
+
+</section>
+<!-- End Presentations Section -->
+
+
+
+
+
     <!-- ======= Leaderships Section (repurposed to Awards) ======= -->
     <section id="leadership">
       <div class="title-box text-center">

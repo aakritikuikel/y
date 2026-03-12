@@ -9,11 +9,11 @@
   <meta content="" name="description">
   <meta content="" name="keywords">
   
-<meta property="og:title" content="Aakriti's Portfolio">
-<meta property="og:description" content="Learn more about me and my experiences.">
-<meta property="og:image" content="https://yrajp.github.io/assets/img/fronthero.jpg">
-<meta property="og:url" content="https://yrajp.github.io">
-<meta property="og:type" content="website">
+  <meta property="og:title" content="Aakriti's Portfolio">
+  <meta property="og:description" content="Learn more about me and my experiences.">
+  <meta property="og:image" content="https://aakritikuikel.github.io/y/assets/img/fronthero.jpg">
+  <meta property="og:url" content="https://aakritikuikel.github.io/y">
+  <meta property="og:type" content="website">
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
@@ -28,14 +28,662 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
- 
+  <style>
+    .btn {
+      padding: 10px 20px;
+      font-size: 16px;
+      text-decoration: none;
+      border-radius: 5px;
+      display: inline-block;
+      background-color: #0078ff;
+      color: white;
+      border: none;
+      transition: background-color 0.3s ease;
+    }
 
+    .btn:hover {
+      background-color: #0056b3;
+    }
 
+    #projects .service-box img{
+      width:100%;
+      height:200px;
+      object-fit:cover;
+      border-radius:6px;
+    }
+
+    .service-box{
+      padding:20px;
+      background:#fff;
+      text-align:center;
+      margin-bottom:30px;
+      box-shadow:0 4px 12px rgba(0,0,0,0.08);
+      border-radius:10px;
+    }
+
+    .certifications{
+      padding:70px 0;
+      background:#f8f9fa;
+    }
+
+    .section-title h2{
+      font-weight:700;
+      margin-bottom:10px;
+    }
+
+    .cert-subtitle{
+      color:#666;
+      margin-bottom:40px;
+    }
+
+    .timeline{
+      position:relative;
+      margin-top:40px;
+    }
+
+    .timeline::before{
+      content:"";
+      position:absolute;
+      left:50%;
+      width:3px;
+      height:100%;
+      background:#0078ff;
+      transform:translateX(-50%);
+    }
+
+    .timeline-item{
+      position:relative;
+      margin-bottom:60px;
+    }
+
+    .timeline-dot{
+      position:absolute;
+      left:50%;
+      width:18px;
+      height:18px;
+      background:#0078ff;
+      border-radius:50%;
+      transform:translateX(-50%);
+      top:15px;
+      box-shadow:0 0 0 6px #e6f0ff;
+    }
+
+    .timeline-content{
+      width:45%;
+      background:#fff;
+      padding:25px;
+      border-radius:10px;
+      box-shadow:0 5px 25px rgba(0,0,0,0.1);
+      transition:all .35s ease;
+    }
+
+    .timeline-content:hover{
+      transform:translateY(-6px);
+      box-shadow:0 12px 35px rgba(0,0,0,0.15);
+    }
+
+    .timeline-item:nth-child(odd) .timeline-content{
+      margin-left:0;
+    }
+
+    .timeline-item:nth-child(even) .timeline-content{
+      margin-left:55%;
+    }
+
+    .cert-img{
+      max-height:120px;
+      margin:15px 0;
+    }
+
+    .reveal{
+      opacity:0;
+      transform:translateY(40px);
+      transition:all 0.8s ease;
+    }
+
+    .reveal.active{
+      opacity:1;
+      transform:translateY(0);
+    }
+
+    #research{
+      padding:80px 20px;
+      background:#f8fafc;
+      font-family: 'Inter', sans-serif;
+    }
+
+    #research .title-box h1{
+      font-size:40px;
+      font-weight:700;
+      margin-bottom:50px;
+      letter-spacing:.5px;
+    }
+
+    .research-card{
+      background:white;
+      border-radius:12px;
+      padding:35px;
+      margin-bottom:35px;
+      position:relative;
+      transition:all .35s ease;
+      border-left:6px solid #2563eb;
+      box-shadow:0 10px 30px rgba(0,0,0,0.08);
+    }
+
+    .research-card:hover{
+      transform:translateY(-6px);
+      box-shadow:0 18px 45px rgba(0,0,0,0.12);
+    }
+
+    .research-header{
+      margin-bottom:18px;
+    }
+
+    .research-title{
+      font-size:24px;
+      font-weight:700;
+      margin-bottom:5px;
+    }
+
+    .research-place{
+      color:#555;
+      font-size:15px;
+    }
+
+    .research-date{
+      font-size:14px;
+      color:#2563eb;
+      font-weight:600;
+      margin-top:3px;
+    }
+
+    .research-list{
+      margin-top:18px;
+      padding-left:0;
+      list-style:none;
+    }
+
+    .research-list li{
+      margin-bottom:12px;
+      font-size:15px;
+      line-height:1.6;
+      color:#333;
+      position:relative;
+      padding-left:25px;
+    }
+
+    .research-list li::before{
+      content:"";
+      width:8px;
+      height:8px;
+      border-radius:50%;
+      background:#2563eb;
+      position:absolute;
+      left:0;
+      top:9px;
+    }
+
+    #work{
+      padding:80px 20px;
+      background:
+        radial-gradient(circle at top left, rgba(34,197,94,0.08), transparent 30%),
+        radial-gradient(circle at bottom right, rgba(37,99,235,0.08), transparent 30%),
+        linear-gradient(180deg, #f8fbff 0%, #f4f8fc 100%);
+    }
+
+    #work .box-shadow-full{
+      padding:25px;
+      background:#fff;
+      border-radius:18px;
+      box-shadow:0 10px 30px rgba(15, 23, 42, 0.08);
+      margin-top:25px;
+      border:1px solid rgba(0,0,0,0.04);
+      transition:all .35s ease;
+    }
+
+    #work .box-shadow-full:hover{
+      transform:translateY(-6px);
+      box-shadow:0 22px 50px rgba(15, 23, 42, 0.12);
+    }
+
+    #work .work-header{
+      display:flex;
+      align-items:center;
+      gap:15px;
+      margin-bottom:12px;
+    }
+
+    #work .company-logo{
+      width:60px;
+      height:60px;
+      object-fit:contain;
+      background:#fff;
+      padding:5px;
+      border-radius:12px;
+      box-shadow:0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    #work h2{
+      margin:0;
+      font-size:22px;
+    }
+
+    #work h5{
+      margin:5px 0;
+      font-weight:400;
+      color:#555;
+      line-height:1.7;
+    }
+
+    /* Premium Spray Drying Section */
+    .spraydry-card{
+      overflow:hidden;
+      position:relative;
+      background:linear-gradient(135deg, #ffffff 0%, #f8fcff 100%);
+    }
+
+    .spraydry-card::before{
+      content:"";
+      position:absolute;
+      top:-120px;
+      right:-120px;
+      width:260px;
+      height:260px;
+      background:radial-gradient(circle, rgba(37,99,235,0.12), transparent 70%);
+      border-radius:50%;
+      pointer-events:none;
+    }
+
+    .spraydry-grid{
+      display:grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap:30px;
+      align-items:center;
+    }
+
+    .spraydry-badge{
+      display:inline-block;
+      padding:8px 14px;
+      border-radius:999px;
+      font-size:13px;
+      font-weight:700;
+      letter-spacing:.5px;
+      text-transform:uppercase;
+      background:rgba(37,99,235,0.10);
+      color:#2563eb;
+      margin-bottom:14px;
+    }
+
+    .spraydry-subtitle{
+      color:#64748b;
+      font-size:15px;
+      margin-bottom:18px;
+      line-height:1.7;
+    }
+
+    .spraydry-points{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:14px;
+      margin-top:20px;
+    }
+
+    .spraydry-mini{
+      background:#ffffff;
+      border:1px solid rgba(37,99,235,0.08);
+      border-radius:14px;
+      padding:16px;
+      box-shadow:0 8px 20px rgba(0,0,0,0.04);
+    }
+
+    .spraydry-mini h4{
+      font-size:16px;
+      margin:0 0 8px 0;
+      color:#0f172a;
+      font-weight:700;
+    }
+
+    .spraydry-mini p{
+      margin:0;
+      color:#475569;
+      font-size:14px;
+      line-height:1.6;
+    }
+
+    .spray-animation-wrap{
+      position:relative;
+      min-height:420px;
+      border-radius:24px;
+      background:
+        linear-gradient(180deg, #eaf6ff 0%, #f9fcff 100%);
+      border:1px solid rgba(37,99,235,0.08);
+      overflow:hidden;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.8), 0 20px 40px rgba(37,99,235,0.08);
+    }
+
+    .tower{
+      position:absolute;
+      top:50px;
+      left:50%;
+      transform:translateX(-50%);
+      width:210px;
+      height:290px;
+      background:linear-gradient(180deg, #dbeafe 0%, #bfdbfe 35%, #93c5fd 100%);
+      clip-path:polygon(22% 0, 78% 0, 88% 28%, 82% 80%, 65% 100%, 35% 100%, 18% 80%, 12% 28%);
+      border:2px solid rgba(37,99,235,0.18);
+      box-shadow:0 20px 35px rgba(37,99,235,0.15);
+    }
+
+    .tower::after{
+      content:"";
+      position:absolute;
+      top:22px;
+      left:50%;
+      transform:translateX(-50%);
+      width:92px;
+      height:18px;
+      background:linear-gradient(90deg, #64748b, #94a3b8);
+      border-radius:10px;
+      box-shadow:0 0 0 5px rgba(148,163,184,0.18);
+    }
+
+    .spray-nozzle{
+      position:absolute;
+      top:60px;
+      left:50%;
+      transform:translateX(-50%);
+      width:14px;
+      height:40px;
+      background:#475569;
+      border-radius:10px;
+      z-index:3;
+    }
+
+    .mist{
+      position:absolute;
+      top:105px;
+      left:50%;
+      width:180px;
+      height:160px;
+      transform:translateX(-50%);
+      background:
+        radial-gradient(circle at 50% 0%, rgba(59,130,246,0.40), transparent 42%),
+        radial-gradient(circle at 30% 35%, rgba(96,165,250,0.28), transparent 30%),
+        radial-gradient(circle at 70% 35%, rgba(96,165,250,0.28), transparent 30%);
+      clip-path:polygon(50% 0%, 100% 100%, 0% 100%);
+      filter:blur(1px);
+      opacity:.9;
+      transform-origin:top center;
+      animation:sprayPulse 3s ease-in-out infinite;
+    }
+
+    .particle{
+      position:absolute;
+      width:8px;
+      height:8px;
+      border-radius:50%;
+      background:rgba(245, 158, 11, 0.9);
+      box-shadow:0 0 10px rgba(245, 158, 11, 0.35);
+      animation:fallDown linear infinite;
+    }
+
+    .particle.p1{ left:48%; top:120px; animation-duration:2.8s; animation-delay:0s; }
+    .particle.p2{ left:44%; top:135px; animation-duration:3.1s; animation-delay:.5s; }
+    .particle.p3{ left:52%; top:145px; animation-duration:2.6s; animation-delay:.9s; }
+    .particle.p4{ left:40%; top:160px; animation-duration:3.4s; animation-delay:1.2s; }
+    .particle.p5{ left:57%; top:155px; animation-duration:2.9s; animation-delay:.4s; }
+    .particle.p6{ left:46%; top:180px; animation-duration:3.2s; animation-delay:1.5s; }
+    .particle.p7{ left:54%; top:190px; animation-duration:2.7s; animation-delay:.8s; }
+    .particle.p8{ left:50%; top:205px; animation-duration:3.0s; animation-delay:1.1s; }
+
+    .hot-air{
+      position:absolute;
+      left:16px;
+      top:120px;
+      width:90px;
+      height:12px;
+      border-radius:999px;
+      background:linear-gradient(90deg, #fb7185, #f59e0b);
+      box-shadow:0 0 18px rgba(245,158,11,0.35);
+      animation:airFlow 2.6s ease-in-out infinite;
+    }
+
+    .hot-air::after{
+      content:"HOT AIR";
+      position:absolute;
+      top:-24px;
+      left:0;
+      font-size:12px;
+      font-weight:700;
+      color:#ef4444;
+      letter-spacing:.6px;
+    }
+
+    .powder-bed{
+      position:absolute;
+      bottom:38px;
+      left:50%;
+      transform:translateX(-50%);
+      width:110px;
+      height:24px;
+      background:linear-gradient(180deg, #fde68a, #f59e0b);
+      border-radius:40px 40px 16px 16px;
+      box-shadow:0 10px 20px rgba(245, 158, 11, 0.25);
+    }
+
+    .cyclone{
+      position:absolute;
+      right:18px;
+      bottom:52px;
+      width:72px;
+      height:120px;
+      background:linear-gradient(180deg, #e2e8f0 0%, #cbd5e1 100%);
+      clip-path:polygon(20% 0, 80% 0, 100% 25%, 65% 85%, 65% 100%, 35% 100%, 35% 85%, 0 25%);
+      border:2px solid rgba(71,85,105,0.18);
+      box-shadow:0 10px 25px rgba(100,116,139,0.18);
+    }
+
+    .cyclone::after{
+      content:"CYCLONE";
+      position:absolute;
+      top:-26px;
+      left:50%;
+      transform:translateX(-50%);
+      font-size:11px;
+      font-weight:700;
+      letter-spacing:.8px;
+      color:#475569;
+      white-space:nowrap;
+    }
+
+    .spray-stats{
+      position:absolute;
+      left:18px;
+      bottom:18px;
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+    }
+
+    .spray-stat{
+      background:rgba(255,255,255,0.78);
+      backdrop-filter:blur(8px);
+      border:1px solid rgba(148,163,184,0.18);
+      padding:10px 12px;
+      border-radius:12px;
+      font-size:12px;
+      color:#334155;
+      font-weight:600;
+      box-shadow:0 8px 18px rgba(15,23,42,0.06);
+    }
+
+    .spray-parallax{
+      transform:translateY(var(--spray-shift, 0px));
+      transition:transform 0.08s linear;
+      will-change:transform;
+    }
+
+    @keyframes sprayPulse{
+      0%,100%{ transform:translateX(-50%) scaleY(1); opacity:.82; }
+      50%{ transform:translateX(-50%) scaleY(1.08); opacity:1; }
+    }
+
+    @keyframes fallDown{
+      0%{ transform:translateY(0) scale(1); opacity:0; }
+      10%{ opacity:1; }
+      85%{ opacity:1; }
+      100%{ transform:translateY(150px) scale(.75); opacity:0; }
+    }
+
+    @keyframes airFlow{
+      0%,100%{ transform:translateX(0); opacity:.8; }
+      50%{ transform:translateX(12px); opacity:1; }
+    }
+
+    #presentations{
+      padding:80px 20px;
+      background:#f8fafc;
+    }
+
+    #presentations .title-box h1{
+      font-size:40px;
+      font-weight:700;
+      margin-bottom:50px;
+    }
+
+    .presentation-card{
+      display:flex;
+      flex-wrap:wrap;
+      gap:40px;
+      align-items:center;
+      background:white;
+      border-radius:12px;
+      padding:35px;
+      box-shadow:0 10px 30px rgba(0,0,0,0.08);
+    }
+
+    .poster-img{
+      width:320px;
+      border-radius:10px;
+      cursor:pointer;
+      transition:transform .3s ease;
+      box-shadow:0 6px 18px rgba(0,0,0,0.15);
+    }
+
+    .poster-img:hover{
+      transform:scale(1.04);
+    }
+
+    .presentation-info{
+      flex:1;
+    }
+
+    .presentation-title{
+      font-size:24px;
+      font-weight:700;
+      margin-bottom:10px;
+    }
+
+    .presentation-meta{
+      color:#666;
+      margin-bottom:15px;
+    }
+
+    .presentation-list{
+      padding-left:18px;
+    }
+
+    .presentation-list li{
+      margin-bottom:10px;
+      line-height:1.6;
+    }
+
+    .poster-modal{
+      display:none;
+      position:fixed;
+      z-index:999;
+      padding-top:40px;
+      left:0;
+      top:0;
+      width:100%;
+      height:100%;
+      background:rgba(0,0,0,0.85);
+    }
+
+    .poster-modal img{
+      margin:auto;
+      display:block;
+      max-width:85%;
+      max-height:85%;
+    }
+
+    .poster-close{
+      position:absolute;
+      top:25px;
+      right:40px;
+      color:white;
+      font-size:40px;
+      cursor:pointer;
+    }
+
+    @media (max-width: 991px){
+      .spraydry-grid{
+        grid-template-columns:1fr;
+      }
+
+      .spray-animation-wrap{
+        min-height:380px;
+      }
+    }
+
+    @media (max-width:768px){
+      .timeline::before{
+        left:12px;
+      }
+
+      .timeline-dot{
+        left:12px;
+      }
+
+      .timeline-content{
+        width:100%;
+        margin-left:35px !important;
+      }
+
+      .research-card{
+        padding:25px;
+      }
+
+      .research-title{
+        font-size:20px;
+      }
+
+      .spraydry-points{
+        grid-template-columns:1fr;
+      }
+
+      .spray-animation-wrap{
+        min-height:340px;
+      }
+
+      .tower{
+        width:180px;
+        height:250px;
+      }
+
+      .mist{
+        width:150px;
+        height:140px;
+      }
+    }
+  </style>
+</head>
+
+<body>
 
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center justify-content-between">
-
       <h1 class="logo"><a href="index.html">Aakriti's Portfolio</a></h1>
       
       <nav id="navbar" class="navbar">
@@ -46,18 +694,12 @@
           <li><a class="nav-link scrollto" href="#research">Research</a></li>
           <li><a class="nav-link scrollto" href="#work">Work Experiences</a></li>
           <li><a class="nav-link scrollto" href="#leadership">Leaderships</a></li>
-          
-          
-         
-            
-          </li>
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
-
+      </nav>
     </div>
-  </header><!-- End Header -->
+  </header>
 
   <!-- ======= Home Section ======= -->
   <div id="home" class="hero route bg-image" style="background-image: url(assets/img/fronthero.jpg)">
@@ -65,866 +707,367 @@
     <div class="hero-content display-table">
       <div class="table-cell">
         <div class="container">
-          <!--<p class="display-6 color-d">Hello, world!</p> -->
-         <!-- <h1 class="hero-title mb-4">I am Aakriti Kuikel</h1> -->
-
-          
-       <p class="hero-subtitle"><span class="typed" data-typed-items=" Welcome! Learn more about me here."></span></p> 
-          <p class="pt-3" align = "left"><a class="btn btn-primary btn js-scroll px-4" href="#about" role="button"> Know about me</a></p>
-<p class="pt-3" align = "left"><a class="btn btn-primary btn js-scroll px-4" href="#projects" role="button"> My academic projects</a></p>
-          <p class="pt-3" align = "left"><a class="btn btn-primary btn js-scroll px-4" href="#research" role="button"> My researches</a></p>
-<p class="pt-3" align = "right"><a class="btn btn-primary btn js-scroll px-4" href="#work" role="button"> My professional experiences</a></p>
-          <p class="pt-3" align = "right"><a class="btn btn-primary btn js-scroll px-4" href="#contact" role="button"> Contact me</a></p>
-
-
-
- 
-
-          
-          
+          <p class="hero-subtitle"><span class="typed" data-typed-items=" Welcome! Learn more about me here."></span></p> 
+          <p class="pt-3" align="left"><a class="btn btn-primary btn js-scroll px-4" href="#about" role="button"> Know about me</a></p>
+          <p class="pt-3" align="left"><a class="btn btn-primary btn js-scroll px-4" href="#projects" role="button"> My academic projects</a></p>
+          <p class="pt-3" align="left"><a class="btn btn-primary btn js-scroll px-4" href="#research" role="button"> My researches</a></p>
+          <p class="pt-3" align="right"><a class="btn btn-primary btn js-scroll px-4" href="#work" role="button"> My professional experiences</a></p>
+          <p class="pt-3" align="right"><a class="btn btn-primary btn js-scroll px-4" href="#contact" role="button"> Contact me</a></p>
         </div>
       </div>
     </div>
-  </div><!-- End home Section -->
-
-
-
-
-
-
-
-
-  
+  </div>
 
   <main id="main">
 
     <!-- ======= About me Section ======= -->
-    
+    <section id="about">
+      <div class="box-shadow-full">
+        <div class="row">
+          <div class="col-sm-6 col-md-5">
+            <div class="about-img">
+              <img src="assets/img/IMG_1966.jpg" class="img-fluid rounded b-shadow-a" alt="">
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-7">
+            <p><span class="title-s">Name: </span> <span>Aakriti Kuikel</span></p>
+            <p><span class="title-s">Education: </span> <span>Masters in Food Science </span></p>
+            <p>(Expected Graduation: May 2026)</p>
+            <p>Bachelors in Food Science (Graduated: May 2023)</p>
+            <p><span class="title-s">Email: </span> <span>aakritikuikel12@gmail.com</span></p>
 
-
-     
-     <section id="about">
-  <div class="box-shadow-full">
-    <div class="row">
-      <div class="col-sm-6 col-md-5">
-        <div class="about-img">
-          <img src="assets/img/IMG_1966.jpg" class="img-fluid rounded b-shadow-a" alt="">
+            <a href="assets/pdf/Aakriti Kuikel 2026.docx" class="btn btn-primary" target="_blank" style="margin-right: 20px;">View Resume</a>
+          </div>
         </div>
-      </div>
-      <div class="col-sm-6 col-md-7">
-        <p><span class="title-s">Name: </span> <span>Aakriti Kuikel</span></p>
-        <p><span class="title-s">Education: </span> <span>Masters in Food Science </span></p>
-        <p>(Expected Graduation: May 2026)</p>
-        <p>Bachelors in Food Science (Graduated: May 2023)</p>
-        <p><span class="title-s">Email: </span> <span>aakritikuikel12@gmail.com</span></p>
-   
+      </div> 
+    </section>
 
-        <!-- Resume Button -->
-        <a href="assets/pdf/Aakriti Kuikel 2026.docx" class="btn btn-primary" target="_blank" style="margin-right: 20px;">View Resume</a>
-
-      
-      </div>
-    </div>
-  </div> 
-</section>
-
-
-  <style>
-  /* Resume button styling */
-  .btn {
-    padding: 10px 20px;
-    font-size: 16px;
-    text-decoration: none;
-    border-radius: 5px;
-    display: inline-block;
-    background-color: #0078ff;
-    color: white;
-    border: none;
-    transition: background-color 0.3s ease;
-  }
-
-  .btn:hover {
-    background-color: #0056b3;
-  }
-
-     
-
- </style>   
- 
-
-
-
-
-                      
-<div class="socials">
-                      <ul>
-                    
-                      
-                        <li><a target="_blank" href="https://www.linkedin.com/in/aakriti-kuikel-079597279/"><span class="ico-circle"><i class="bi bi-linkedin"></i></span></a></li>
-                      </ul>                       
-                    </div>
-
-
-                      </div>
-                    </div>
-                  </div>
-                  
-            
-                    
-                  </div>
-                </div>
-           
-                  <div class="about-me pt-4 pt-md-0">
-                    
-                    
-                   <!-- ======= Certifications Section ======= -->
-<section id="certifications" class="certifications">
-  <div class="container">
-
-    <div class="section-title text-center">
-      <h2>Certifications</h2>
-      <p class="cert-subtitle">Professional trainings and certifications</p>
+    <div class="socials">
+      <ul>
+        <li><a target="_blank" href="https://www.linkedin.com/in/aakriti-kuikel-079597279/"><span class="ico-circle"><i class="bi bi-linkedin"></i></span></a></li>
+      </ul>                       
     </div>
 
-    <div class="timeline">
+    <section id="certifications" class="certifications">
+      <div class="container">
+        <div class="section-title text-center">
+          <h2>Certifications</h2>
+          <p class="cert-subtitle">Professional trainings and certifications</p>
+        </div>
 
-      <!-- Certification 1 -->
-      <div class="timeline-item reveal">
-        <div class="timeline-dot"></div>
+        <div class="timeline">
 
-        <div class="timeline-content">
-          <h4>Internal Auditor ISO 22000:2018 / HACCP</h4>
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h4>Internal Auditor ISO 22000:2018 / HACCP</h4>
+              <img src="assets/img/globus_certification_nepal_pvt_ltd_logo.jpg" class="img-fluid cert-img" alt="ISO Certification">
+              <p>
+                Received Internal Auditor Training on Food Safety Management
+                System ISO 22000:2018/HACCP from Globus Certification Nepal Pvt. Ltd.
+              </p>
+            </div>
+          </div>
 
-          <img src="assets/img/globus_certification_nepal_pvt_ltd_logo.jpg"
-               class="img-fluid cert-img"
-               alt="ISO Certification">
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h4>Root Cause Analysis</h4>
+              <img src="assets/img/Blog-HOR-RootCause-2.png" class="img-fluid cert-img" alt="Root Cause Analysis">
+              <p>
+                Completed Root Cause Analysis training.
+              </p>
+            </div>
+          </div>
 
-          <p>
-            Received Internal Auditor Training on Food Safety Management
-            System ISO 22000:2018/HACCP from Globus Certification Nepal Pvt. Ltd.
-          </p>
         </div>
       </div>
+    </section>
 
-      <!-- Certification 2 -->
-      <div class="timeline-item reveal">
-        <div class="timeline-dot"></div>
+    <section>
+      <h1 align="center">About me</h1>
+      <p class="lead">
+        I am a graduate student in Food Science and Technology with technical expertise in food safety systems, quality assurance, and product formulation. 
+        My work involves HACCP plan development, hazard analysis, CCP determination, and validation of preventive controls in compliance with regulatory standards. 
+        I have hands-on experience in food microbiology and analytical testing, including SPC, yeast and mold counts, LAB, coliforms, pathogen detection, PCR-based analysis, 
+        and HPLC quantification of bioactive compounds. My background includes evaluation of intrinsic and extrinsic factors affecting microbial growth, shelf-life and spoilage studies,
+        and application of GMP, sanitation, and documentation practices. Through industry internships and applied research, 
+        I have developed a strong foundation in process control, data-driven decision making, and cross-functional collaboration within food production and laboratory environments.
+      </p>
+    </section>
 
-        <div class="timeline-content">
-          <h4>Root Cause Analysis</h4>
-
-          <img src="assets/img/Blog-HOR-RootCause-2.png"
-               class="img-fluid cert-img"
-               alt="Root Cause Analysis">
-
-          <p>
-            Completed Root Cause Analysis training.
-          </p>
-        </div>
+    <!-- ======= Projects Section ======= -->
+    <section id="projects">
+      <div class="title-box text-center">
+        <h1>Academic Projects</h1>
       </div>
 
-    </div>
+      <div class="row">
 
-  </div>
-</section>
+        <div class="col-md-4">
+          <div class="service-box project-hover">
+            <img src="assets/img/project-yogurt-coffee.png" alt="Cold Brew Coffee–Greek Yogurt Drink" class="img-fluid">
+            <h2 class="s-title">Cold Brew Coffee–Greek Yogurt Drink</h2>
+            <p class="s-description">
+              Conceptualized a functional dairy beverage and designed formulation for protein content, flavor balance,
+              and consumer acceptance; reviewed processing steps and food safety (HACCP, pH, allergens), packaging, labeling, and shelf life.
+            </p>
+          </div>
+        </div>
 
+        <div class="col-md-4">
+          <div class="service-box project-hover">
+            <img src="assets/img/project-haccp-carrot.png" alt="HACCP Plan for Carrot Soup" class="img-fluid">
+            <h2 class="s-title">HACCP Plan for Carrot Soup</h2>
+            <p class="s-description">
+              Developed a detailed HACCP plan including hazard analysis, critical control points, preventive strategies,
+              monitoring, corrective actions, verification, and record-keeping to meet regulatory standards.
+            </p>
+          </div>
+        </div>
 
-<style>
+        <div class="col-md-4">
+          <div class="service-box project-hover">
+            <img src="assets/img/project-protein-bar.png" alt="Protein Bar for Elderly People" class="img-fluid">
+            <h2 class="s-title">Protein Bar for Elderly People</h2>
+            <p class="s-description">
+              Formulated a protein bar targeted to elderly nutrition and conducted sensory evaluation to assess acceptability
+              and key sensory attributes.
+            </p>
+          </div>
+        </div>
 
-/* SECTION */
+        <div class="col-md-4">
+          <div class="service-box project-hover">
+            <img src="assets/img/project-chicory-cacao.png" alt="Chicory and Cacao Coffee Alternative" class="img-fluid">
+            <h2 class="s-title">Chicory &amp; Cacao as Coffee Alternative</h2>
+            <p class="s-description">
+              Conducted comparative sensory analysis (aroma, flavor, mouthfeel, color, aftertaste) using trained panel methods
+              and standardized sensory protocols.
+            </p>
+          </div>
+        </div>
 
-.certifications{
-  padding:70px 0;
-  background:#f8f9fa;
-}
+        <div class="col-md-4">
+          <div class="service-box project-hover">
+            <img src="assets/img/project-cookies.png" alt="Cookies with Chickpea and Corn Flour" class="img-fluid">
+            <h2 class="s-title">Chickpea &amp; Corn Flour Cookies</h2>
+            <p class="s-description">
+              Developed a novel cookie formulation and performed physicochemical + sensory evaluation; analyzed results using
+              structured testing methods with SPSS and MS Excel.
+            </p>
+          </div>
+        </div>
 
-.section-title h2{
-  font-weight:700;
-  margin-bottom:10px;
-}
+      </div>
+    </section>
 
-.cert-subtitle{
-  color:#666;
-  margin-bottom:40px;
-}
+    <!-- ======= Research Section ======= -->
+    <section id="research">
+      <div class="title-box text-center">
+        <h1>Research Experience</h1>
+      </div>
 
-/* TIMELINE */
+      <div class="research-card">
+        <div class="research-header">
+          <div class="research-title">Graduate Research Assistant / Teaching Assistant</div>
+          <div class="research-place">Kinesiology, Health, Food & Nutritional Sciences Dept., UW–Stout</div>
+          <div class="research-date">Sep 2025 – Present</div>
+        </div>
 
-.timeline{
-  position:relative;
-  margin-top:40px;
-}
+        <ul class="research-list">
+          <li>Performed microbial analysis including SPC, yeast & mold, LAB, coliforms, <i>E. coli</i>, Salmonella, Listeria, and Vibrio across meat, seafood, produce, dairy, and water samples.</li>
+          <li>Conducted pathogen isolation and biochemical assays using FDA BAM and USDA FSIS methodologies including MPN and Petrifilm analysis.</li>
+          <li>Applied molecular techniques including conventional PCR and real-time PCR for rapid pathogen detection.</li>
+          <li>Evaluated intrinsic and extrinsic microbial growth factors such as pH, water activity, moisture content, oxygen availability, and fermentation conditions.</li>
+          <li>Performed shelf-life studies, spoilage assessment, and water quality testing while maintaining GMP, sanitation, and biosafety compliance.</li>
+          <li>Supported laboratory instruction by maintaining lab readiness, reviewing lab reports, grading assignments, and training students on aseptic microbiological techniques.</li>
+        </ul>
+      </div>
 
-.timeline::before{
-  content:"";
-  position:absolute;
-  left:50%;
-  width:3px;
-  height:100%;
-  background:#0078ff;
-  transform:translateX(-50%);
-}
+      <div class="research-card">
+        <div class="research-header">
+          <div class="research-title">Research Assistant</div>
+          <div class="research-place">Kinesiology, Health, Food & Nutritional Sciences Dept., UW–Stout</div>
+          <div class="research-date">May 2025 – Aug 2025</div>
+        </div>
 
-/* TIMELINE ITEM */
+        <ul class="research-list">
+          <li>Conducted HPLC analysis to quantify ascorbic acid and other bioactive compounds in food matrices.</li>
+          <li>Evaluated antimicrobial activity of grape seed extract against foodborne microorganisms to explore natural preservative applications.</li>
+          <li>Monitored shelf-life stability of pickle varieties during room temperature storage using pH, TPC, yeast & mold, and LAB measurements.</li>
+          <li>Applied food microbiology and quality control techniques supporting food safety, preservation, and product development.</li>
+        </ul>
+      </div>
+    </section>
 
-.timeline-item{
-  position:relative;
-  margin-bottom:60px;
-}
+    <!-- ======= Work Section ======= -->
+    <section id="work">
+      <div class="title-box text-center">
+        <h1>Work Experiences</h1>
+      </div>
 
-.timeline-dot{
-  position:absolute;
-  left:50%;
-  width:18px;
-  height:18px;
-  background:#0078ff;
-  border-radius:50%;
-  transform:translateX(-50%);
-  top:15px;
-  box-shadow:0 0 0 6px #e6f0ff;
-}
+      <!-- Experience 1 -->
+      <div class="box-shadow-full">
+        <div class="work-header">
+          <img src="assets/img/uw-logo.jpg" class="company-logo" alt="UW Dining Services Logo">
+          <div>
+            <h2>Student Manager — University of Wisconsin Dining Services</h2>
+            <h5>Sep 2024 – Current • Menomonie, WI</h5>
+          </div>
+        </div>
 
-/* CARD */
+        <h5>&bull; Monitored food safety and quality controls during preparation, holding, and service (temperature + cross-contamination control)</h5>
+        <h5>&bull; Enforced sanitation, hygiene, and SOP compliance aligned with health regulations</h5>
+        <h5>&bull; Trained and supervised staff on GMPs, food safety practices, and corrective actions</h5>
+        <h5>&bull; Supported audit readiness through routine checks, documentation, and inspection follow-ups</h5>
+      </div>
 
-.timeline-content{
-  width:45%;
-  background:#fff;
-  padding:25px;
-  border-radius:10px;
-  box-shadow:0 5px 25px rgba(0,0,0,0.1);
-  transition:all .35s ease;
-}
+      <!-- Experience 2 -->
+      <div class="box-shadow-full">
+        <div class="work-header">
+          <img src="assets/img/aahana-logo.jpg" class="company-logo" alt="Aahana Dairy Logo">
+          <div>
+            <h2>Aahana Food and Dairy Beverage Industry Pvt. Ltd.</h2>
+            <h5>Jan 2024 – Aug 2024 • Nepal</h5>
+          </div>
+        </div>
 
-.timeline-content:hover{
-  transform:translateY(-6px);
-  box-shadow:0 12px 35px rgba(0,0,0,0.15);
-}
+        <h5>&bull; Conducted milk sampling and quality analysis; supported compliance with HACCP food safety standards</h5>
+        <h5>&bull; Assisted in pasteurization and homogenization to enhance consistency and shelf life</h5>
+        <h5>&bull; Performed 20+ microbiological and physicochemical tests for dairy quality assurance</h5>
+        <h5>&bull; Supported 3+ NPD trials by formulating and testing dairy-based beverages</h5>
+        <h5>&bull; Collaborated with QC team; improved process efficiency through GMP practices</h5>
+      </div>
 
-.timeline-item:nth-child(odd) .timeline-content{
-  margin-left:0;
-}
+      <!-- NEW SPRAY DRY EXPERIENCE -->
+      <div class="box-shadow-full spraydry-card reveal">
+        <div class="spraydry-grid">
 
-.timeline-item:nth-child(even) .timeline-content{
-  margin-left:55%;
-}
+          <div class="spraydry-content">
+            <span class="spraydry-badge">Spray Drying Experience</span>
 
-/* IMAGE */
+            <h2>Spray Drying Operations — Dairy Processing</h2>
+            <h5>Milk Powder Processing • Evaporation, Atomization, Drying Tower &amp; Cyclone Separation</h5>
 
-.cert-img{
-  max-height:120px;
-  margin:15px 0;
-}
+            <p class="spraydry-subtitle">
+              Gained hands-on understanding of industrial spray drying used in milk powder production, with emphasis on
+              concentrate preparation, evaporation efficiency, drying tower operation, and powder separation. Built
+              process knowledge of how operating conditions influence powder quality, drying performance, and final product stability.
+            </p>
 
-/* SCROLL ANIMATION */
+            <h5>&bull; Understood the two-phase drying system in which pretreated milk is first evaporated to approximately <strong>45–50% dry matter</strong> before final drying in the spray tower.</h5>
+            <h5>&bull; Observed the three key stages of spray drying: <strong>dispersion of concentrate into fine droplets</strong>, rapid <strong>contact with hot air for moisture evaporation</strong>, and <strong>separation of dry milk particles from exhaust air</strong>.</h5>
+            <h5>&bull; Developed strong process knowledge of essential spray drying steps including <strong>air heating, atomization, hot-air/liquid mixing, and cyclone-based powder recovery</strong>.</h5>
+            <h5>&bull; Recognized the critical role of <strong>evaporation before drying</strong> in improving energy efficiency and achieving high-quality milk powder.</h5>
+            <h5>&bull; Built familiarity with <strong>single-stage, two-stage, and three-stage dryer systems</strong> and their impact on drying performance and powder characteristics.</h5>
+            <h5>&bull; Learned how droplet transformation during ideal drying conditions affects product properties, including approximately <strong>50% weight reduction</strong>, <strong>40% volume reduction</strong>, and droplet diameter reduction to nearly <strong>75% of original size</strong>.</h5>
+            <h5>&bull; Connected spray drying operations to practical end uses of milk powder including <strong>recombination of milk, bakery and pastry applications, egg substitution, chocolate manufacture, and sausage production</strong>.</h5>
+            <h5>&bull; Strengthened understanding of dairy powder quality requirements, including production considerations for <strong>extra graded skim milk powder</strong> and separator-based standardization for SMP processing.</h5>
 
-.reveal{
-  opacity:0;
-  transform:translateY(40px);
-  transition:all 0.8s ease;
-}
+            <div class="spraydry-points">
+              <div class="spraydry-mini">
+                <h4>Process Understanding</h4>
+                <p>Evaporation, atomization, thermal drying, powder recovery, and dryer-stage configuration.</p>
+              </div>
 
-.reveal.active{
-  opacity:1;
-  transform:translateY(0);
-}
+              <div class="spraydry-mini">
+                <h4>Quality Focus</h4>
+                <p>Powder quality depends heavily on upstream concentration, drying conditions, and air-powder separation.</p>
+              </div>
 
-/* MOBILE */
+              <div class="spraydry-mini">
+                <h4>Equipment Knowledge</h4>
+                <p>Exposure to drying towers, atomization concepts, air-heating systems, and cyclone separation units.</p>
+              </div>
 
-@media (max-width:768px){
-
-.timeline::before{
-  left:12px;
-}
-
-.timeline-dot{
-  left:12px;
-}
-
-.timeline-content{
-  width:100%;
-  margin-left:35px !important;
-}
-
-}
-
-</style>
-
-
-<script>
-
-/* Scroll Reveal Animation */
-
-function reveal(){
-
-var reveals=document.querySelectorAll(".reveal");
-
-for(var i=0;i<reveals.length;i++){
-
-var windowHeight=window.innerHeight;
-var elementTop=reveals[i].getBoundingClientRect().top;
-var elementVisible=120;
-
-if(elementTop<windowHeight-elementVisible){
-reveals[i].classList.add("active");
-}
-
-}
-
-}
-
-window.addEventListener("scroll",reveal);
-
-</script>
-
-
-
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                      <h1 align="center">
-                        About me
-                      </h5>
-                    </div>
-                    <p class="lead">
-              I am a graduate student in Food Science and Technology with technical expertise in food safety systems, quality assurance, and product formulation. 
-                      My work involves HACCP plan development, hazard analysis, CCP determination, and validation of preventive controls in compliance with regulatory standards. 
-                      I have hands-on experience in food microbiology and analytical testing, including SPC, yeast and mold counts, LAB, coliforms, pathogen detection, PCR-based analysis, 
-                      and HPLC quantification of bioactive compounds. My background includes evaluation of intrinsic and extrinsic factors affecting microbial growth, shelf-life and spoilage studies,
-                      and application of GMP, sanitation, and documentation practices. Through industry internships and applied research, 
-                      I have developed a strong foundation in process control, data-driven decision making, and cross-functional collaboration within food production and laboratory environments.
-                    
-                  </div>
-                </div>
+              <div class="spraydry-mini">
+                <h4>Product Applications</h4>
+                <p>Milk powder use across dairy recombination, bakery systems, confectionery, and processed meat products.</p>
               </div>
             </div>
           </div>
+
+          <div class="spray-animation-wrap spray-parallax" id="sprayParallax">
+            <div class="tower"></div>
+            <div class="spray-nozzle"></div>
+            <div class="mist"></div>
+
+            <div class="hot-air"></div>
+
+            <div class="particle p1"></div>
+            <div class="particle p2"></div>
+            <div class="particle p3"></div>
+            <div class="particle p4"></div>
+            <div class="particle p5"></div>
+            <div class="particle p6"></div>
+            <div class="particle p7"></div>
+            <div class="particle p8"></div>
+
+            <div class="powder-bed"></div>
+            <div class="cyclone"></div>
+
+            <div class="spray-stats">
+              <div class="spray-stat">45–50% DM before final drying</div>
+              <div class="spray-stat">~50% weight reduction</div>
+              <div class="spray-stat">Cyclone powder separation</div>
+            </div>
+          </div>
+
         </div>
       </div>
-    </section><!-- End About Section -->
- <!-- ======= Projects Section ======= -->
-  </head>
-    <body>
 
+      <!-- Experience 3 -->
+      <div class="box-shadow-full">
+        <div class="work-header">
+          <img src="assets/img/cocacola-logo.png" class="company-logo" alt="Coca-Cola Logo">
+          <div>
+            <h2>Industrial Exposure — Bottlers Nepal Limited (Coca-Cola)</h2>
+            <h5>May 12 – Jul 7, 2023 • Balaju, Kathmandu</h5>
+          </div>
+        </div>
 
-      <style>
-#projects .service-box img{
-  width:100%;
-  height:200px;
-  object-fit:cover;
-  border-radius:6px;
-}
-
-.service-box{
-  padding:20px;
-  background:#fff;
-  text-align:center;
-  margin-bottom:30px;
-  box-shadow:0 4px 12px rgba(0,0,0,0.08);
-  border-radius:10px;
-}
-</style>
-
-<section id="projects">
-  <div class="title-box text-center">
-    <h1>Academic Projects</h1>
-  </div>
-
-  <div class="row">
-
-    <div class="col-md-4">
-      <div class="service-box project-hover">
-        <img src="assets/img/project-yogurt-coffee.png" alt="Cold Brew Coffee–Greek Yogurt Drink" class="img-fluid">
-        <h2 class="s-title">Cold Brew Coffee–Greek Yogurt Drink</h2>
-        <p class="s-description">
-          Conceptualized a functional dairy beverage and designed formulation for protein content, flavor balance,
-          and consumer acceptance; reviewed processing steps and food safety (HACCP, pH, allergens), packaging, labeling, and shelf life.
-        </p>
+        <h5>&bull; Gained experience in water treatment (WTP) and effluent treatment (ETP) for beverage safety and environmental compliance</h5>
+        <h5>&bull; Completed 20+ microbiological analyses to prevent contamination and support HACCP/ISO adherence</h5>
+        <h5>&bull; Observed supply chain and production operations: raw materials, QC checks, and line efficiency</h5>
       </div>
-    </div>
+    </section>
 
-    <div class="col-md-4">
-      <div class="service-box project-hover">
-        <img src="assets/img/project-haccp-carrot.png" alt="HACCP Plan for Carrot Soup" class="img-fluid">
-        <h2 class="s-title">HACCP Plan for Carrot Soup</h2>
-        <p class="s-description">
-          Developed a detailed HACCP plan including hazard analysis, critical control points, preventive strategies,
-          monitoring, corrective actions, verification, and record-keeping to meet regulatory standards.
-        </p>
+    <!-- ======= Presentations Section ======= -->
+    <section id="presentations">
+      <div class="title-box text-center">
+        <h1>Presentations</h1>
       </div>
-    </div>
 
-    <div class="col-md-4">
-      <div class="service-box project-hover">
-        <img src="assets/img/project-protein-bar.png" alt="Protein Bar for Elderly People" class="img-fluid">
-        <h2 class="s-title">Protein Bar for Elderly People</h2>
-        <p class="s-description">
-          Formulated a protein bar targeted to elderly nutrition and conducted sensory evaluation to assess acceptability
-          and key sensory attributes.
-        </p>
+      <div class="presentation-card">
+        <img src="assets/img/IMG_2457.jpeg" class="poster-img" onclick="openPoster()">
+
+        <div class="presentation-info">
+          <div class="presentation-title">
+            A Dash of Science, A Pinch of Safety: Stirring HACCP into Carrot Soup
+          </div>
+
+          <div class="presentation-meta">
+            Poster Presentation • University of Wisconsin–Stout
+          </div>
+
+          <ul class="presentation-list">
+            <li>Developed a Hazard Analysis and Critical Control Point (HACCP) plan for canned carrot soup production to ensure product safety and quality.</li>
+            <li>Analyzed biological, chemical, and physical hazards including microbial contamination from pathogens such as <i>Salmonella</i>, <i>E. coli</i>, and <i>Clostridium botulinum</i>.</li>
+            <li>Designed a full processing flow diagram covering ingredient receiving, washing, blanching, cooking, filling, sealing, retort processing, and storage.</li>
+            <li>Identified critical control points including ingredient temperature control, washing sanitation, blanching conditions, cooking temperature, retort sterilization, and metal detection.</li>
+            <li>Established corrective actions and verification procedures to maintain food safety compliance and reduce contamination risks.</li>
+          </ul>
+        </div>
       </div>
-    </div>
 
-    <div class="col-md-4">
-      <div class="service-box project-hover">
-        <img src="assets/img/project-chicory-cacao.png" alt="Chicory and Cacao Coffee Alternative" class="img-fluid">
-        <h2 class="s-title">Chicory &amp; Cacao as Coffee Alternative</h2>
-        <p class="s-description">
-          Conducted comparative sensory analysis (aroma, flavor, mouthfeel, color, aftertaste) using trained panel methods
-          and standardized sensory protocols.
-        </p>
+      <div id="posterModal" class="poster-modal">
+        <span class="poster-close" onclick="closePoster()">&times;</span>
+        <img src="assets/img/IMG_2457.jpeg">
       </div>
-    </div>
+    </section>
 
-    <div class="col-md-4">
-      <div class="service-box project-hover">
-        <img src="assets/img/project-cookies.png" alt="Cookies with Chickpea and Corn Flour" class="img-fluid">
-        <h2 class="s-title">Chickpea &amp; Corn Flour Cookies</h2>
-        <p class="s-description">
-          Developed a novel cookie formulation and performed physicochemical + sensory evaluation; analyzed results using
-          structured testing methods with SPSS and MS Excel.
-        </p>
-      </div>
-    </div>
-
-  </div>
-</section>
-<!-- End Projects Section -->
-
-
-    <!-- ======= Research Section ======= -->
-<section id="research">
-
-<style>
-
-#research{
-  padding:80px 20px;
-  background:#f8fafc;
-  font-family: 'Inter', sans-serif;
-}
-
-#research .title-box h1{
-  font-size:40px;
-  font-weight:700;
-  margin-bottom:50px;
-  letter-spacing:.5px;
-}
-
-.research-card{
-  background:white;
-  border-radius:12px;
-  padding:35px;
-  margin-bottom:35px;
-  position:relative;
-  transition:all .35s ease;
-  border-left:6px solid #2563eb;
-  box-shadow:0 10px 30px rgba(0,0,0,0.08);
-}
-
-.research-card:hover{
-  transform:translateY(-6px);
-  box-shadow:0 18px 45px rgba(0,0,0,0.12);
-}
-
-.research-header{
-  margin-bottom:18px;
-}
-
-.research-title{
-  font-size:24px;
-  font-weight:700;
-  margin-bottom:5px;
-}
-
-.research-place{
-  color:#555;
-  font-size:15px;
-}
-
-.research-date{
-  font-size:14px;
-  color:#2563eb;
-  font-weight:600;
-  margin-top:3px;
-}
-
-.research-list{
-  margin-top:18px;
-  padding-left:0;
-  list-style:none;
-}
-
-.research-list li{
-  margin-bottom:12px;
-  font-size:15px;
-  line-height:1.6;
-  color:#333;
-  position:relative;
-  padding-left:25px;
-}
-
-.research-list li::before{
-  content:"";
-  width:8px;
-  height:8px;
-  border-radius:50%;
-  background:#2563eb;
-  position:absolute;
-  left:0;
-  top:9px;
-}
-
-@media (max-width:768px){
-
-.research-card{
-  padding:25px;
-}
-
-.research-title{
-  font-size:20px;
-}
-
-}
-
-</style>
-
-
-<div class="title-box text-center">
-<h1>Research Experience</h1>
-</div>
-
-
-<div class="research-card">
-
-<div class="research-header">
-<div class="research-title">Graduate Research Assistant / Teaching Assistant</div>
-<div class="research-place">Kinesiology, Health, Food & Nutritional Sciences Dept., UW–Stout</div>
-<div class="research-date">Sep 2025 – Present</div>
-</div>
-
-<ul class="research-list">
-<li>Performed microbial analysis including SPC, yeast & mold, LAB, coliforms, <i>E. coli</i>, Salmonella, Listeria, and Vibrio across meat, seafood, produce, dairy, and water samples.</li>
-
-<li>Conducted pathogen isolation and biochemical assays using FDA BAM and USDA FSIS methodologies including MPN and Petrifilm analysis.</li>
-
-<li>Applied molecular techniques including conventional PCR and real-time PCR for rapid pathogen detection.</li>
-
-<li>Evaluated intrinsic and extrinsic microbial growth factors such as pH, water activity, moisture content, oxygen availability, and fermentation conditions.</li>
-
-<li>Performed shelf-life studies, spoilage assessment, and water quality testing while maintaining GMP, sanitation, and biosafety compliance.</li>
-
-<li>Supported laboratory instruction by maintaining lab readiness, reviewing lab reports, grading assignments, and training students on aseptic microbiological techniques.</li>
-</ul>
-
-</div>
-
-
-
-<div class="research-card">
-
-<div class="research-header">
-<div class="research-title">Research Assistant</div>
-<div class="research-place">Kinesiology, Health, Food & Nutritional Sciences Dept., UW–Stout</div>
-<div class="research-date">May 2025 – Aug 2025</div>
-</div>
-
-<ul class="research-list">
-<li>Conducted HPLC analysis to quantify ascorbic acid and other bioactive compounds in food matrices.</li>
-
-<li>Evaluated antimicrobial activity of grape seed extract against foodborne microorganisms to explore natural preservative applications.</li>
-
-<li>Monitored shelf-life stability of pickle varieties during room temperature storage using pH, TPC, yeast & mold, and LAB measurements.</li>
-
-<li>Applied food microbiology and quality control techniques supporting food safety, preservation, and product development.</li>
-</ul>
-
-</div>
-
-</section>
-<!-- End Research Section -->
-
-   <!-- ======= Work Section ======= -->
-<section id="work">
-
-<style>
-#work .box-shadow-full{
-  padding:25px;
-  background:#fff;
-  border-radius:10px;
-  box-shadow:0 4px 12px rgba(0,0,0,0.08);
-  margin-top:25px;
-}
-
-#work .work-header{
-  display:flex;
-  align-items:center;
-  gap:15px;
-  margin-bottom:10px;
-}
-
-#work .company-logo{
-  width:60px;
-  height:60px;
-  object-fit:contain;
-  background:#fff;
-  padding:5px;
-  border-radius:8px;
-  box-shadow:0 2px 6px rgba(0,0,0,0.1);
-}
-
-#work h2{
-  margin:0;
-  font-size:22px;
-}
-
-#work h5{
-  margin:5px 0;
-  font-weight:400;
-  color:#555;
-}
-</style>
-
-<div class="title-box text-center">
-<h1>Work Experiences</h1>
-</div>
-
-
-<!-- Experience 1 -->
-<div class="box-shadow-full">
-
-<div class="work-header">
-<img src="assets/img/uw-logo.jpg" class="company-logo" alt="UW Dining Services Logo">
-
-<div>
-<h2>Student Manager — University of Wisconsin Dining Services</h2>
-<h5>Sep 2024 – Current • Menomonie, WI</h5>
-</div>
-</div>
-
-<h5>&bull; Monitored food safety and quality controls during preparation, holding, and service (temperature + cross-contamination control)</h5>
-<h5>&bull; Enforced sanitation, hygiene, and SOP compliance aligned with health regulations</h5>
-<h5>&bull; Trained and supervised staff on GMPs, food safety practices, and corrective actions</h5>
-<h5>&bull; Supported audit readiness through routine checks, documentation, and inspection follow-ups</h5>
-
-</div>
-
-
-<!-- Experience 2 -->
-<div class="box-shadow-full">
-
-<div class="work-header">
-<img src="assets/img/aahana-logo.jpg" class="company-logo" alt="Aahana Dairy Logo">
-
-<div>
-<h2>Aahana Food and Dairy Beverage Industry Pvt. Ltd.</h2>
-<h5>Jan 2024 – Aug 2024 • Nepal</h5>
-</div>
-</div>
-
-<h5>&bull; Conducted milk sampling and quality analysis; supported compliance with HACCP food safety standards</h5>
-<h5>&bull; Assisted in pasteurization and homogenization to enhance consistency and shelf life</h5>
-<h5>&bull; Performed 20+ microbiological and physicochemical tests for dairy quality assurance</h5>
-<h5>&bull; Supported 3+ NPD trials by formulating and testing dairy-based beverages</h5>
-<h5>&bull; Collaborated with QC team; improved process efficiency through GMP practices</h5>
-
-</div>
-
-
-<!-- Experience 3 -->
-<div class="box-shadow-full">
-
-<div class="work-header">
-<img src="assets/img/cocacola-logo.png" class="company-logo" alt="Coca-Cola Logo">
-
-<div>
-<h2>Industrial Exposure — Bottlers Nepal Limited (Coca-Cola)</h2>
-<h5>May 12 – Jul 7, 2023 • Balaju, Kathmandu</h5>
-</div>
-</div>
-
-<h5>&bull; Gained experience in water treatment (WTP) and effluent treatment (ETP) for beverage safety and environmental compliance</h5>
-<h5>&bull; Completed 20+ microbiological analyses to prevent contamination and support HACCP/ISO adherence</h5>
-<h5>&bull; Observed supply chain and production operations: raw materials, QC checks, and line efficiency</h5>
-
-</div>
-
-</section>
-<!-- End Work Section -->
-
-<!-- ======= Presentations Section ======= -->
-<section id="presentations">
-
-<style>
-
-#presentations{
-  padding:80px 20px;
-  background:#f8fafc;
-}
-
-#presentations .title-box h1{
-  font-size:40px;
-  font-weight:700;
-  margin-bottom:50px;
-}
-
-.presentation-card{
-  display:flex;
-  flex-wrap:wrap;
-  gap:40px;
-  align-items:center;
-  background:white;
-  border-radius:12px;
-  padding:35px;
-  box-shadow:0 10px 30px rgba(0,0,0,0.08);
-}
-
-.poster-img{
-  width:320px;
-  border-radius:10px;
-  cursor:pointer;
-  transition:transform .3s ease;
-  box-shadow:0 6px 18px rgba(0,0,0,0.15);
-}
-
-.poster-img:hover{
-  transform:scale(1.04);
-}
-
-.presentation-info{
-  flex:1;
-}
-
-.presentation-title{
-  font-size:24px;
-  font-weight:700;
-  margin-bottom:10px;
-}
-
-.presentation-meta{
-  color:#666;
-  margin-bottom:15px;
-}
-
-.presentation-list{
-  padding-left:18px;
-}
-
-.presentation-list li{
-  margin-bottom:10px;
-  line-height:1.6;
-}
-
-/* Poster modal */
-
-.poster-modal{
-  display:none;
-  position:fixed;
-  z-index:999;
-  padding-top:40px;
-  left:0;
-  top:0;
-  width:100%;
-  height:100%;
-  background:rgba(0,0,0,0.85);
-}
-
-.poster-modal img{
-  margin:auto;
-  display:block;
-  max-width:85%;
-  max-height:85%;
-}
-
-.poster-close{
-  position:absolute;
-  top:25px;
-  right:40px;
-  color:white;
-  font-size:40px;
-  cursor:pointer;
-}
-
-</style>
-
-
-<div class="title-box text-center">
-<h1>Presentations</h1>
-</div>
-
-<div class="presentation-card">
-
-<img src="assets/img/IMG_2457.jpeg" class="poster-img" onclick="openPoster()">
-
-<div class="presentation-info">
-
-<div class="presentation-title">
-A Dash of Science, A Pinch of Safety: Stirring HACCP into Carrot Soup
-</div>
-
-<div class="presentation-meta">
-Poster Presentation • University of Wisconsin–Stout
-</div>
-
-<ul class="presentation-list">
-
-<li>Developed a Hazard Analysis and Critical Control Point (HACCP) plan for canned carrot soup production to ensure product safety and quality.</li>
-
-<li>Analyzed biological, chemical, and physical hazards including microbial contamination from pathogens such as <i>Salmonella</i>, <i>E. coli</i>, and <i>Clostridium botulinum</i>.</li>
-
-<li>Designed a full processing flow diagram covering ingredient receiving, washing, blanching, cooking, filling, sealing, retort processing, and storage.</li>
-
-<li>Identified critical control points including ingredient temperature control, washing sanitation, blanching conditions, cooking temperature, retort sterilization, and metal detection.</li>
-
-<li>Established corrective actions and verification procedures to maintain food safety compliance and reduce contamination risks.</li>
-
-</ul>
-
-</div>
-</div>
-
-
-<!-- Poster Modal -->
-
-<div id="posterModal" class="poster-modal">
-
-<span class="poster-close" onclick="closePoster()">&times;</span>
-
-<img src="assets/img/IMG_2457.jpeg">
-
-</div>
-
-
-<script>
-
-function openPoster(){
-document.getElementById("posterModal").style.display="block";
-}
-
-function closePoster(){
-document.getElementById("posterModal").style.display="none";
-}
-
-</script>
-
-</section>
-<!-- End Presentations Section -->
-
-
-
-
-
-    <!-- ======= Leaderships Section (repurposed to Awards) ======= -->
+    <!-- ======= Leaderships Section ======= -->
     <section id="leadership">
       <div class="title-box text-center">
         <h1>Awards &amp; Recognition</h1>
@@ -942,10 +1085,8 @@ document.getElementById("posterModal").style.display="none";
         <h5>&bull; Awarded by University of Wisconsin–Stout for academic performance, leadership, and contributions to international students.</h5>
       </div>
     </section>
-    <!-- End Leaderships Section -->
 
-
-    <!-- ======= Poems Section (repurposed to Skills & Certifications) ======= -->
+    <!-- ======= Skills & Certifications ======= -->
     <section id="poems">
       <div class="title-box text-center">
         <h1>Skills &amp; Certifications</h1>
@@ -968,8 +1109,6 @@ document.getElementById("posterModal").style.display="none";
         <h5>&bull; ISO 22000:2018 Food Safety Management System</h5>
       </div>
     </section>
-    <!-- End Poems Section -->
-
 
     <!-- ======= Contact Section ======= -->
     <section id="contact">
@@ -978,21 +1117,11 @@ document.getElementById("posterModal").style.display="none";
       <div class="col-sm-6 col-md-7">
         <p><span class="title-s">Email: </span> <span>aakritikuikel12@gmail.com</span></p>
         <p><span class="title-s">Location: </span> <span>Mankato, MN, 56001</span></p>
-
-        <!-- Optional: if you have LinkedIn, add it here -->
-        <!--
-        <div class="socials">
-          <ul>
-            <li><a target="_blank" href="https://www.linkedin.com/in/YOUR-LINK/"><span class="ico-circle"><i class="bi bi-linkedin"></i></span></a></li>
-          </ul>
-        </div>
-        -->
       </div>
     </section>
-    <!-- End Contact Section -->
 
-  </main><!-- End #main -->
-  
+  </main>
+
   <div id="preloader"></div>
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
@@ -1007,6 +1136,44 @@ document.getElementById("posterModal").style.display="none";
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
 
-</>
+  <script>
+    function reveal(){
+      var reveals=document.querySelectorAll(".reveal");
 
+      for(var i=0;i<reveals.length;i++){
+        var windowHeight=window.innerHeight;
+        var elementTop=reveals[i].getBoundingClientRect().top;
+        var elementVisible=120;
+
+        if(elementTop<windowHeight-elementVisible){
+          reveals[i].classList.add("active");
+        }
+      }
+    }
+
+    window.addEventListener("scroll", reveal);
+    reveal();
+
+    function openPoster(){
+      document.getElementById("posterModal").style.display="block";
+    }
+
+    function closePoster(){
+      document.getElementById("posterModal").style.display="none";
+    }
+
+    // Premium scroll animation for spray dry visual
+    window.addEventListener("scroll", function(){
+      const spray = document.getElementById("sprayParallax");
+      if(!spray) return;
+
+      const rect = spray.getBoundingClientRect();
+      const viewportHeight = window.innerHeight;
+      const centerOffset = rect.top - viewportHeight / 2;
+      const shift = Math.max(-20, Math.min(20, centerOffset * -0.06));
+      spray.style.setProperty('--spray-shift', shift + 'px');
+    });
+  </script>
+
+</body>
 </html>
